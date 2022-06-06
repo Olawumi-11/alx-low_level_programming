@@ -1,27 +1,22 @@
-/*
- * File: 4-print_alphabt.c
- * Auth: Brennan D Braraban
- */
 #include <stdio.h>
 /**
- * main - Prints the alphabet in lowercase, except for q and e.
- *
- * Return: Always 0.
+ * main - main block
+ * Description: Get a random number and check its last digit, compare it with 5
+ * Return: 0
  */
 int main(void)
 {
-	char letter;
+	char c = 'a';
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	while (c <= 'z')
 	{
-		if (letter = 'a'; letter <= 'z'; letter++)
+		if (c != 'e' && c != 'q')
 		{
-			
-			if (letter != 'e' && letter != 'q')
-				putchar(leter);
+			putchar(c);
+		}
+		c++;
 	}
 
 	putchar('\n');
-
 	return (0);
 }
