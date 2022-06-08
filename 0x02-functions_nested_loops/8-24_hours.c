@@ -1,54 +1,28 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * jack_bauer - prints every minute of the day of jack Bauer
+ * jack_bauer - prints every minutes of the day
+ *
+ * Description:prints every minute of the day
+ *
  * Return: void
  */
 
 void jack_bauer(void)
 {
 
-	int h1;
-	int h2;
-	int m1;
-	int m2;
-	int a = 9;
+		int hours_tens, hours_ones, minutes_tens, minutes_ones, hours_max;
 
-	h2 = 0;
-	while (h2 <= 2)
-	{
-		if (h2 == 2)
+		hours_max = 58;
+		hours_tens = '0';
+		while (hours_tens < '3')
 		{
-			/*Restrin to 23h, not 29*/
-			a = 3;
-		}
-		h1 = 0;
-		while (h1 <= a)
-		{
-			m2 = 0;
-			while (m2 <= 5)
+			if (hours_tens == '2')
 			{
-				m1 = 0;
-				while (m1 <= 9)
-				{
-					_putchar('0' + h2);
-					_putchar('0' + h1);
-					_putchar(':');
-					_putchar('0' + m2);
-					_putchar('0' + m1);
-					_putchar('\n');
-					m1++;
-
-				}
-				m2++;
-
+				hours_max = '4';
 			}
-			h1++;
-
-		}
-		h2++;
-
-	}
-
-
-}
+			hours_ones = '0';
+			while (hours_ones < hours_max)
+			{
+				minutes_tens = '0';
+				while (minutes_ones 
