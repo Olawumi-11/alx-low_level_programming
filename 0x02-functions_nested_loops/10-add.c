@@ -2,12 +2,12 @@
 
 /**
  * add - adds two integers
- * @n1: integer 1
+ * @n1: integer 
  * @n2: integer 2
  *
- * Description: give two integers, returns sum
+ * Description: give two integers, return sum
  *
- * Return sum
+ * Return: sum
  */
 
 int add(int n1, int n2)
