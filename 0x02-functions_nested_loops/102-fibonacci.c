@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the fibonacci numbers, starting 
- * with 1 or 2 followed by a new line
+ * main - ptints the first 50 fibonacci numbers, starting 
+ * with 1 and 2 followed by a new line
  *
  * Return: 0
  */
