@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - ptints the first 50 fibonacci numbers, starting 
+ * main - ptints the first 50 fibonacci numbers,starting
  * with 1 and 2 followed by a new line
  *
  * Return: 0
