@@ -1,1 +1,1 @@
-low level programming with C
+Pointers, Arrays and Strings in C
