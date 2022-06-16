@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * string_toupper - Function that reverses the content of an an array of integers.
+ * string_toupper - Function that reverses the content of an array of integers.
  *
  * @s: s is the array
  *
