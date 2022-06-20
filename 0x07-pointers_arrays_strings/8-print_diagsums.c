@@ -3,6 +3,7 @@
 /**
  * print_diagsums - prints buffer in hexa
  * @a: cheese
+ * @size: buffer2
  *
  * Return: Nothing.
  */
