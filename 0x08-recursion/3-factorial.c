@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * factorial - check code for ALX school students.
+ * factorial - check the code for ALX students.
+ * @n: number of factorial
  * Return: Always 0.
  */
 int factorial(int n)
