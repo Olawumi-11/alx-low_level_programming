@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prime_a - check the code for ALX students.
+ * prime_a - check code for ALX students
  * @a: number
  * @b: number of power
  * Return: Always 0.
@@ -22,7 +22,7 @@ int prime_a(int a, int b)
 
 
 /**
- * is_prime_numberc - check the code for ALX students
+ * is_prime_number - check code for ALX students
  * @n: number
  *
  * Return: Always 0.
