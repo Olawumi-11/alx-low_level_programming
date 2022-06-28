@@ -1,50 +1,46 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * argstostr - function that concatenates all the arguments of your program.
  *
+ *  * argstostr - Concatenates all arguments of the program into a string;
+ *               arguments are separated by a new line in the string
+ * @ac: The number of arguments passed to the program.
+ * @av: An array of pointers to the arguments.
  *
- * @ac: ARGC
- * @av: ARGV
- *
- * Return: Pointer
+ * Return: If ac == 0, av == NULL, or the function fails - NULL.
+ *         Otherwise - a pointer to the new string.
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0, j, longitud = 0, l, k;
-	char *string;
+	char *str;
+	int arg, byte, index, size = ac;
 
-	if (ac == 0 || av == '\0')
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (arg = 0; arg < ac; arg++)
 	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			j++;
-		}
-		longitud  +=  j + 1;
+		for (byte = 0; av[arg][byte]; byte++)
+			size++;
 	}
-	string = malloc(sizeof(char) * (longitud + 1));
 
-	if (string == NULL)
-	{
+	str = malloc(sizeof(char) * size + 1);
+
+	if (str == NULL)
 		return (NULL);
-	}
-	longitud = 0;
-	for (k = 0; k < ac; k++)
+
+	index = 0;
+
+	for (arg = 0; arg < ac; arg++)
 	{
-		for (l = 0; av[k][l] != '\0'; l++)
-		{
-			*(string + longitud) = av[k][l];
-			longitud++;
-		}
-		*(string + longitud) = '\n';
-		longitud++;
+		for (byte = 0; av[arg][byte]; byte++)
+			str[index++] = av[arg][byte];
+
+		str[index++] = '\n';
 	}
 
-	return (string);
+	str[size] = '\0';
+
+	return (str);
 }
