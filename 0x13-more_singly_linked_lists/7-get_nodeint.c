@@ -1,31 +1,25 @@
-nclude <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - Removing the first item of a list.
+ * get_nodeint_at_index - Locates a given node of
+ *                        a listint_t linked list.
+ * @head: A pointer to the head of the listint_t list.
+ * @index: The index of the node to locate - indices start at 0.
  *
- * @head: A pointer to the first node of the list
- * @index: NUmber of index the list.
- * Return: Value of a node index.
+ * Return: If the node does not exist - NULL.
+ *         Otherwise - the located node.
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int i = 0;
-	listint_t *node_index = head;
+	unsigned int node;
 
-	if (head == NULL)
-	{
-		return (0);
-	}
-
-	while (i < index)
+	for (node = 0; node < index; node++)
 	{
 		if (head == NULL)
 			return (NULL);
-		node_index = head->next;
-		head = node_index;
-		++i;
+
+		head = head->next;
 	}
-	return (node_index);
+
+	return (head);
 }
